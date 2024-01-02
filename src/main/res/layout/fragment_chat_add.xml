@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.chat.chatadd.ChatAddFragment">
+
+<!--    <TextView-->
+<!--        android:id="@+id/testOutput2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="32dp"-->
+<!--        android:text="TextView"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/addMemberButton"-->
+<!--        tools:layout_editor_absoluteX="258dp" />-->
+
+    <EditText
+        android:id="@+id/roomNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Create ChatRoom"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/addChatRoomButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="CREATE"
+        app:layout_constraintStart_toEndOf="@+id/roomNameText"
+        tools:layout_editor_absoluteY="-3dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/testOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.673"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addChatRoomButton" />
+
+    <EditText
+        android:id="@+id/memberEmailText"
+        android:layout_width="190dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Member Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatIdText" />
+
+    <EditText
+        android:id="@+id/chatIdText"
+        android:layout_width="69dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:hint="ChatID"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/roomNameText"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/addMemberButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="48dp"
+        android:text="ADD"
+        app:layout_constraintStart_toEndOf="@+id/chatIdText"
+        app:layout_constraintTop_toBottomOf="@+id/addChatRoomButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

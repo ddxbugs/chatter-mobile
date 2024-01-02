@@ -1,0 +1,48 @@
+<resources>
+
+    <!-- This is a MaterialDesignTheme. Required when using Material Components -->
+    <style name="CustomTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#122259</item>
+        <item name="colorPrimaryDark">#122259</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="Theme_MyApp" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorDark</item>
+        <item name="colorSecondary">@color/colorLight</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="Theme_Husky" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorHusky</item>
+        <item name="colorSecondary">@color/colorLight</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+
+<!--    <style name="Theme.MyApp" parent="Theme.MaterialComponents.Light">-->
+<!--        &lt;!&ndash; ... &ndash;&gt;-->
+<!--    </style>-->
+
+<!--    <style name="Theme.MyApp" parent="Theme.MaterialComponents.DayNight">-->
+<!--        &lt;!&ndash; ... &ndash;&gt;-->
+<!--    </style>-->
+
+    <style name="Widget.App.Button.OutlinedButton.IconOnly" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+
+
+</resources>

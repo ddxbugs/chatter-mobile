@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_graph"
+    app:startDestination="@id/SignInFragment">
+
+    <fragment
+        android:id="@+id/SignInFragment"
+        android:name="edu.uw.tcss450.team6_client.ui.auth.signin.SignInFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_loginFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+        <argument
+            android:name="email"
+            app:argType="string"
+            android:defaultValue="default" />
+        <argument
+            android:name="password"
+            app:argType="string"
+            android:defaultValue="default" />
+        <action
+            android:id="@+id/action_SignInFragment_to_resetFragment"
+            app:destination="@id/resetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="edu.uw.tcss450.team6_client.ui.auth.register.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_verificationProcessFragment"
+            app:destination="@id/verificationProcessFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="edu.uw.tcss450.team6_client.MainActivity"
+        android:label="MainActivity" >
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <argument
+            android:name="jwt"
+            app:argType="string" />
+    </activity>
+    <fragment
+        android:id="@+id/verificationProcessFragment"
+        android:name="edu.uw.tcss450.team6_client.ui.auth.register.VerificationProcessFragment"
+        android:label="fragment_verification_process"
+        tools:layout="@layout/fragment_verification_process" >
+        <argument
+            android:name="firstName"
+            app:argType="string"
+            android:defaultValue="default" />
+        <argument
+            android:name="lastName"
+            app:argType="string"
+            android:defaultValue="default" />
+        <action
+            android:id="@+id/action_verificationProcessFragment_to_SignInFragment"
+            app:destination="@id/SignInFragment"
+            app:popUpTo="@id/SignInFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetFragment"
+        android:name="edu.uw.tcss450.team6_client.ui.auth.reset.ResetFragment"
+        android:label="fragment_reset">
+        <action
+            android:id="@+id/action_resetFragment_to_resetVerficationProcessFragment"
+            app:destination="@id/resetVerificationProcessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetVerificationProcessFragment"
+        android:name="edu.uw.tcss450.team6_client.ui.auth.reset.ResetVerificationProcessFragment"
+        android:label="fragment_reset_verification_process"
+        tools:layout="@layout/fragment_reset_verification_process">
+        <action
+            android:id="@+id/action_resetVerficationProcessFragment_to_SignInFragment"
+            app:destination="@id/SignInFragment" />
+        <argument
+            android:name="email"
+            android:defaultValue="default"
+            app:argType="string" />
+        <argument
+            android:name="password"
+            android:defaultValue="default"
+            app:argType="string" />
+    </fragment>
+</navigation>

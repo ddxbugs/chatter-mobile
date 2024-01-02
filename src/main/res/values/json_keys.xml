@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="keys_json_exist_message">exist</string>
+    <string name="keys_json_non_exist_message">non_exist</string>
+    <string name="keys_json_chat_id">chatid</string>
+    <string name="keys_json_chatroom_name">name</string>
+    <string name="keys_json_message_preview">message</string>
+    <string name="keys_json_members">email</string>
+    <string name="keys_json_timestamp">timestamp</string>
+</resources>
